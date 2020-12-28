@@ -4,10 +4,6 @@ import 'package:flutter/services.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  //画面の向きを縦に固定
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp,
-  ]);
   runApp(MyApp());
 }
 
@@ -346,5 +342,3 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 }
-
-
