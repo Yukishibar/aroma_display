@@ -9,11 +9,9 @@ The main screen of the app is shown in the picture below.
 Tap "Choose aroma" to select a scent.
 Then, a photo corresponding to the scent will be displayed.
 
-![appscreen1](https://user-images.githubusercontent.com/63706799/103330325-540a8680-4aa4-11eb-96d5-26b545f07e74.png)
+![appscreen1](https://user-images.githubusercontent.com/63706799/103330325-540a8680-4aa4-11eb-96d5-26b545f07e74.png)![appscreen2](https://user-images.githubusercontent.com/63706799/103330541-486b8f80-4aa5-11eb-932c-a73cfa99bfe5.png)
 
 You can choose from lavender, lemon, and rosemary scents.
-
-![appscreen2](https://user-images.githubusercontent.com/63706799/103330541-486b8f80-4aa5-11eb-932c-a73cfa99bfe5.png)
 
 # Features
 
