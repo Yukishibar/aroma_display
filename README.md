@@ -43,5 +43,6 @@ samples, guidance on mobile development, and a full API reference.
 # Note
 
 This app is a test version, not the full version.
+I do not guarantee that it will work under Android environment.
 
 Thank you!!
