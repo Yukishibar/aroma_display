@@ -1,23 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/services.dart';
+import 'dart:io';
+import 'package:flutter/foundation.dart';
 
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(MyApp());
+void main() async{
+  Socket sock = await Socket.connect('192.168.21.52', 80);
+  runApp(MyApp(sock));
 }
 
 class MyApp extends StatelessWidget {
+  Socket socket;
+
+  MyApp(Socket s) {
+    this.socket = s;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(
+        title: 'Flutter Demo Home Page',
+        channel: socket,
+      ),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  final Socket channel;
+
+  MyHomePage({Key key, this.title, this.channel}) : super(key: key);
 
   final String title;
 
@@ -26,6 +38,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void _displayCon() {
+    widget.channel.write("j");
+  }
+
+  @override
+  void dispose() {
+    widget.channel.close();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -120,7 +142,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    onPressed: () {},
+                    onPressed: _displayCon,
                   ),
                 )
               ],
@@ -212,7 +234,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
-                    onPressed: () {},
+                    onPressed: _displayCon,
                   ),
                 )
               ],
@@ -285,8 +307,8 @@ class _MyHomePageState extends State<MyHomePage> {
     "rosemary",
   ];
 
-  String _selectedItemLeft = "None";
-  String _selectedItemRight = "None";
+  String _selectedItemLeft = "lavender";
+  String _selectedItemRight = "lemon";
 
   //画像のURL処理
   Widget _imageItemLeft(String name) {
