@@ -51,6 +51,20 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+            "FeelEng-lab",
+          style: TextStyle(
+              fontSize: 30,
+              fontWeight: FontWeight.bold,
+              color: Colors.orange,
+              //fontFamily: "Lobster",
+              fontFamily: "PaytoneOne", //not blodならあり
+              fontStyle: FontStyle.italic
+          ),
+        ),
+        backgroundColor: Colors.indigo[600],
+      ),
       body: Container(
         margin: const EdgeInsets.all(10.0),
         child: Row(
@@ -65,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       top: 15.0, bottom: 50.0, right: 10.0, left: 10.0
                   ),
                   child: Text(
-                    "Left Atomizer",
+                    "Left",
                     style: TextStyle(
                       fontSize: 23,
                         fontWeight: FontWeight.bold,
@@ -91,12 +105,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
-                  color: Colors.cyan[600],
+                  color: Colors.indigo[400],
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
                   onPressed: () {
-                    _showModalPicker_Left(context);
+                    _showModalPicker_left(context);
                   },
                 ),
 
@@ -138,7 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    color: Colors.cyan[600],
+                    color: Colors.indigo[400],
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
@@ -157,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       top: 15.0, bottom: 50.0, right: 10.0, left: 10.0
                   ),
                   child: Text(
-                    "Right Atomizer",
+                    "Right",
                     style: TextStyle(
                         fontSize: 23,
                         fontWeight: FontWeight.bold,
@@ -183,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ),
-                  color: Colors.cyan[600],
+                  color: Colors.indigo[400],
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10.0),
                   ),
@@ -230,7 +244,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                       ),
                     ),
-                    color: Colors.cyan[600],
+                    color: Colors.indigo[400],
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                     ),
@@ -245,7 +259,7 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void _showModalPicker_Left(BuildContext context) {
+  void _showModalPicker_left(BuildContext context) {
     showModalBottomSheet<void>(
       context: context,
       builder: (BuildContext context) {

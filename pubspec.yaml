@@ -24,3 +24,20 @@ flutter:
   uses-material-design: true
   assets:
     - images/
+
+  fonts:
+    - family: Lobster
+      fonts:
+        - asset: fonts/Lobster-Regular.ttf
+
+    - family: KronaOne
+      fonts:
+        - asset: fonts/KronaOne-Regular.ttf
+
+    - family: PaytoneOne
+      fonts:
+        - asset: fonts/PaytoneOne-Regular.ttf
+
+    - family: RammettoOne
+      fonts:
+        - asset: fonts/RammettoOne-Regular.ttf
