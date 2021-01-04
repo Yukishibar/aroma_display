@@ -39,7 +39,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   void _displayCon() {
-    widget.channel.write("j");
+    widget.channel.write("j\n");
   }
 
   @override
