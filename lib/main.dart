@@ -4,7 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 
 void main() async{
-  Socket sock = await Socket.connect('192.168.21.52', 80);
+  Socket sock = await Socket.connect('secret', 80);
   runApp(MyApp(sock));
 }
 
